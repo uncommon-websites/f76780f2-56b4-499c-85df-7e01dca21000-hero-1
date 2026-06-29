@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afternoon - Better Customer Experiences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased font-sans text-white bg-gray-900 selection:bg-white/30">
+
+    <section class="relative w-full h-screen min-h-[700px] overflow-hidden flex flex-col">
+        
+        <!-- Background Image & Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/f76780f2-56b4-499c-85df-7e01dca21000/hero-1-img-0-1782758727443.png" alt="Woman smiling using Afternoon" class="w-full h-full object-cover animate-scale-in delay-0" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent animate-fade-in delay-0"></div>
+        </div>
+
+        <!-- Navigation -->
+        <header class="relative z-20 w-full max-w-[1440px] mx-auto px-6 py-6 flex items-center justify-between animate-fade-in delay-0">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white">
+                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 21C14.2091 21 16 16.9706 16 12C16 7.02944 14.2091 3 12 3C9.79086 3 8 7.02944 8 12C8 16.9706 9.79086 21 12 21Z" stroke="currentColor" stroke-width="1.5" transform="rotate(60 12 12)"/>
+                    <path d="M12 21C14.2091 21 16 16.9706 16 12C16 7.02944 14.2091 3 12 3C9.79086 3 8 7.02944 8 12C8 16.9706 9.79086 21 12 21Z" stroke="currentColor" stroke-width="1.5" transform="rotate(-60 12 12)"/>
+                    <path d="M12 21C14.2091 21 16 16.9706 16 12C16 7.02944 14.2091 3 12 3C9.79086 3 8 7.02944 8 12C8 16.9706 9.79086 21 12 21Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span class="font-semibold tracking-widest text-[14px] uppercase mt-0.5">AFTERNOON</span>
+            </a>
+
+            <!-- Center Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-[14px] font-medium text-white/90 hover:text-white transition-colors duration-200">Product</a>
+                <a href="#" class="text-[14px] font-medium text-white/90 hover:text-white transition-colors duration-200">Industries</a>
+                <a href="#" class="text-[14px] font-medium text-white/90 hover:text-white transition-colors duration-200">Customers</a>
+                <a href="#" class="text-[14px] font-medium text-white/90 hover:text-white transition-colors duration-200">Company</a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-6">
+                <a href="#" class="hidden sm:block text-[14px] font-medium text-white/90 hover:text-white transition-colors duration-200">Sign in</a>
+                <a href="#" class="px-5 py-2 rounded-full bg-white/10 border border-white/20 text-[14px] font-medium hover:bg-white/20 transition-colors duration-200 backdrop-blur-sm active:scale-97">
+                    Learn more
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="relative z-10 flex-1 w-full max-w-[1440px] mx-auto px-6 flex flex-col justify-center pb-24">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-6xl lg:text-[80px] font-medium leading-[1.05] tracking-tight text-balance mb-10 animate-fade-in-up delay-100">
+                    Better customer<br>experiences.<br>Built on Afternoon.
+                </h1>
+                <div class="animate-fade-in-up delay-200">
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white text-gray-900 text-[15px] font-medium hover:bg-gray-100 transition-colors duration-200 active:scale-97">
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Floating UI Cards -->
+        <div class="absolute right-[5%] lg:right-[10%] bottom-[15%] lg:bottom-[20%] z-20 hidden md:flex flex-col gap-4 animate-fade-in-up delay-300">
+            <!-- Card 1 -->
+            <div class="w-[340px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-5 shadow-2xl">
+                <div class="flex items-center gap-2 mb-2.5 text-white/70">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M12 21C14.2091 21 16 16.9706 16 12C16 7.02944 14.2091 3 12 3C9.79086 3 8 7.02944 8 12C8 16.9706 9.79086 21 12 21Z" stroke="currentColor" stroke-width="1.5" transform="rotate(60 12 12)"/>
+                        <path d="M12 21C14.2091 21 16 16.9706 16 12C16 7.02944 14.2091 3 12 3C9.79086 3 8 7.02944 8 12C8 16.9706 9.79086 21 12 21Z" stroke="currentColor" stroke-width="1.5" transform="rotate(-60 12 12)"/>
+                        <path d="M12 21C14.2091 21 16 16.9706 16 12C16 7.02944 14.2091 3 12 3C9.79086 3 8 7.02944 8 12C8 16.9706 9.79086 21 12 21Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span class="text-[13px] font-medium">Afternoon Agent</span>
+                </div>
+                <p class="text-[15px] text-white font-medium leading-snug">
+                    Hi there, how can I help you today?
+                </p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="w-[340px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-5 shadow-2xl ml-12">
+                <div class="flex items-center gap-2 mb-2.5 text-white/70">
+                    <div class="w-4 h-4 rounded-full bg-gray-400 overflow-hidden flex-shrink-0">
+                        <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/f76780f2-56b4-499c-85df-7e01dca21000/hero-1-img-1-1782758725404.png" alt="Marie" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-[13px] font-medium">Marie</span>
+                </div>
+                <p class="text-[15px] text-white font-medium leading-snug">
+                    Can we see our doctor first thing this morning?
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
